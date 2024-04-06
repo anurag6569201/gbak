@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'jazzmin',
     'feature',
     'home',
 ]
@@ -137,8 +137,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 JAZZMIN_SETTINGS = {
-    'site_header':"Sanitas",
-    'site_brand':"Sanitas",
+    'site_header':"Gbak",
+    'site_brand':"Gbak",
     'site_logo':'assets/images/logo.png',
-    'copyright':"sanitas.com",
+    'copyright':"Gbak.com",
 }
