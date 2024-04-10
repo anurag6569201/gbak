@@ -8,11 +8,11 @@ def index(request):
 def about(request):
     return render(request,"core/about.html")
 
-def causes(request):
-    return render(request,"core/causes.html")
+def resource(request):
+    return render(request,"core/resource.html")
 
-def donate(request):
-    return render(request,"core/donate.html")
+def team(request):
+    return render(request,"core/team.html")
 
 def blog(request):
     return render(request,"core/blog.html")
