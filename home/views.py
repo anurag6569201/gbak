@@ -25,3 +25,6 @@ def event(request):
 
 def contact(request):
     return render(request,"core/contact.html")
+
+def blogview(request):
+    return render(request,"core/blog-single.html")

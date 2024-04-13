@@ -9,6 +9,7 @@ urlpatterns=[
     path("resource",views.resource,name="resource"),
     path("team",views.team,name="team"),
     path("blog",views.blog,name="blog"),
+    path("blogview",views.blogview,name="blogview"),
     path("gallery",views.gallery,name="gallery"),
     path("event",views.event,name="event"),
     path("contact",views.contact,name="contact"),
