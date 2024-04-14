@@ -12,7 +12,7 @@
         <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Doing Nothing is Not An Option
           of Our Life</h1>
 
-        <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="../../static/images/intro.mp4"
+        <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="{{indexHead.video.url}}"
             class="btn btn-white btn-outline-white px-4 py-3 popup-vimeo"><span class="icon-play mr-2"></span>Watch
             Video</a></p>
       </div>
@@ -27,8 +27,8 @@
         <div class="block-18 color-1 align-items-stretch">
           <div class="text">
             <span>Served Over</span>
-            <strong class="number" data-number="3">3</strong>
-            <span>Schools in 2 states of india.</span>
+            <strong class="number" data-number="{{indexHead.numberOfSchool}}">{{indexHead.numberOfSchool}}</strong>
+            <span>Schools in {{indexHead.numberOfStates}} states of india.</span>
           </div>
         </div>
       </div>
@@ -101,84 +101,37 @@
       </div>
     </div>
     <div class="row">
+      {% for investor in investors %}
       <div class="col-lg-12 d-flex mb-sm-12 ftco-animate" style="justify-content: center;">
         <div class="staff">
           <div class="d-flex mb-4">
-            <div class="img" style="background-image: url(../../static/images/person_1.jpg);"></div>
+            <div class="img" style="background-image: url({{ investor.profile_image.url }});"></div>
             <div class="info ml-4">
-              <h3><a href="teacher-single.html">Lorem person</a></h3>
-              <span class="position">Donated Just now</span>
+              <h3><a href="teacher-single.html">{{ investor.invName }}</a></h3>
+              <span class="position">{{ investor.invDonationTime }}</span>
               <div class="text">
-                <p>Donated <span>$300</span> for <a href="#">Children Needs Education</a></p>
+                <p>Donated <span>{{investor.invMoney }}</span> for <a href="#">{{ investor.invPurpose }}</a></p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {% endfor %}
     </div>
   </div>
 </section>
 
 <section class="ftco-gallery">
-  <div class="d-md-flex">
-    <a href="../../static/images/pic1.jpg"
+  <div class="row" style="justify-content: center;">
+    {% for homeimage in homeimages %}
+    <a href="{{homeimage.images.url}}"
       class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-      style="background-image: url(../../static/images/pic1.jpg);">
+      style="background-image: url({{homeimage.images.url}});">
       <div class="icon d-flex justify-content-center align-items-center">
         <span class="icon-search"></span>
       </div>
     </a>
-    <a href="../../static/images/pic2.jpg"
-      class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-      style="background-image: url(../../static/images/pic2.jpg);">
-      <div class="icon d-flex justify-content-center align-items-center">
-        <span class="icon-search"></span>
-      </div>
-    </a>
-    <a href="../../static/images/pic3.jpg"
-      class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-      style="background-image: url(../../static/images/pic3.jpg);">
-      <div class="icon d-flex justify-content-center align-items-center">
-        <span class="icon-search"></span>
-      </div>
-    </a>
-    <a href="../../static/images/pic1.jpg"
-      class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-      style="background-image: url(../../static/images/pic1.jpg);">
-      <div class="icon d-flex justify-content-center align-items-center">
-        <span class="icon-search"></span>
-      </div>
-    </a>
-  </div>
-  <div class="d-md-flex">
-    <a href="../../static/images/pic1.jpg"
-      class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-      style="background-image: url(../../static/images/pic1.jpg);">
-      <div class="icon d-flex justify-content-center align-items-center">
-        <span class="icon-search"></span>
-      </div>
-    </a>
-    <a href="../../static/images/pic2.jpg"
-      class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-      style="background-image: url(../../static/images/pic2.jpg);">
-      <div class="icon d-flex justify-content-center align-items-center">
-        <span class="icon-search"></span>
-      </div>
-    </a>
-    <a href="../../static/images/pic3.jpg"
-      class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-      style="background-image: url(../../static/images/pic3.jpg);">
-      <div class="icon d-flex justify-content-center align-items-center">
-        <span class="icon-search"></span>
-      </div>
-    </a>
-    <a href="../../static/images/pic1.jpg"
-      class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-      style="background-image: url(../../static/images/pic1.jpg);">
-      <div class="icon d-flex justify-content-center align-items-center">
-        <span class="icon-search"></span>
-      </div>
-    </a>
+    {% endfor %}
   </div>
 </section>
 

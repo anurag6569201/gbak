@@ -2,16 +2,16 @@ from django.db import models
 from django_ckeditor_5.fields import CKEditor5Field
 
 # Create your models here.
-POSITION_CHOICES=(
+POSITION_CHOICES={
     ('Member','Member'),
     ('Admin','Admin'),
     ('Volunteer','Volunteer'),
-)
-class blog(models.Model):
+}
+class aboutUs(models.Model):
     textarea=CKEditor5Field(config_name='extends')
     heading=models.CharField(max_length=100)
 
-class aboutUs(models.Model):
+class blog(models.Model):
     textarea=CKEditor5Field(config_name='extends')
     heading=models.CharField(max_length=100)
 

@@ -1,16 +1,17 @@
 from django.urls import path
 from home import views
+from feature import views as feature_view
 
 app_name="home"
 
 urlpatterns=[
     path("",views.index,name="index"),
-    path("about",views.about,name="about"),
-    path("resource",views.resource,name="resource"),
-    path("team",views.team,name="team"),
-    path("blog",views.blog,name="blog"),
-    path("blogview",views.blogview,name="blogview"),
-    path("gallery",views.gallery,name="gallery"),
-    path("event",views.event,name="event"),
-    path("contact",views.contact,name="contact"),
+    path("about",feature_view.about,name="about"),
+    path("resource",feature_view.resource,name="resource"),
+    path("team",feature_view.team,name="team"),
+    path("blog",feature_view.blog,name="blog"),
+    path("blogview",feature_view.blogview,name="blogview"),
+    path("gallery",feature_view.gall,name="gallery"),
+    path("event",feature_view.event,name="event"),
+    path("contact",feature_view.contact,name="contact"),
 ]

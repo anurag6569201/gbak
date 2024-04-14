@@ -150,7 +150,7 @@ JAZZMIN_SETTINGS = {
 # ckeditor for blog and other stuffs
 # ckeditor
 CKEDITOR_UPLOAD_PATH = "uploads/"
-CKEDITOR_5_FILE_STORAGE = "sanitasprj.storage.CustomStorage"
+CKEDITOR_5_FILE_STORAGE = "gbak.storage.CustomStorage"
 customColorPalette = [
         {
             'color': 'hsl(4, 90%, 58%)',

@@ -1,30 +1,15 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
+from home.models import schoolnums,investor,homePageImage
 
 # Create your views here.
 def index(request):
-    return render(request,"core/index.html")
-
-def about(request):
-    return render(request,"core/about.html")
-
-def resource(request):
-    return render(request,"core/resource.html")
-
-def team(request):
-    return render(request,"core/team.html")
-
-def blog(request):
-    return render(request,"core/blog.html")
-
-def gallery(request):
-    return render(request,"core/gallery.html")
-
-def event(request):
-    return render(request,"core/event.html")
-
-def contact(request):
-    return render(request,"core/contact.html")
-
-def blogview(request):
-    return render(request,"core/blog-single.html")
+    indexHead=schoolnums.objects.first()
+    investors=investor.objects.all()
+    homeimage=homePageImage.objects.all()
+    context={
+        'indexHead':indexHead,
+        'investors':investors,
+        'homeimages':homeimage,
+    }
+    return render(request,"core/index.html",context)
